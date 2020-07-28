@@ -1,0 +1,106 @@
+.header{
+    @include flex(space-between);
+    @include gridArea(5rem, 1, 1, -1, -1);
+    box-shadow: 1px 0 5px $grey;
+
+    .logo-box{
+        @include size(5rem, 100%);
+        
+        .logo{
+            @include flex();
+            @include size(100%, 100%);
+            
+            .logo-image{            
+                @include size(90%, 80%);
+            }
+        }
+        
+    }
+
+    .navigation{
+        @include size(initial, 100%);
+        @include flex(flex-end);
+        
+        .lists{
+            @include size(100%, 100%);
+            @include flex();
+            @include tablet(){
+                display: none;
+
+                &.active{
+                    display: initial;
+                    flex-direction: column;        
+                    @include size(30%, 100%);
+                    @include position(absolute, 0, 0, initial, initial, 5);                   
+                    background: $red;
+
+                    @include phone(){
+                        width: 100%;
+                    }
+                    
+                    .closed{
+                        @include size(5rem, 5rem);
+                        @include position(relative, initial, 0, initial, initial, 5);                  
+                        position: relative;                
+                        cursor: pointer;
+                        margin-bottom: 2.5rem;
+                    }
+                    
+                    .list{
+                        margin: 2rem 0 6rem 0;
+                        text-align: center;
+                        
+                        .link{
+                            color: $white;
+                            font-size: 4vw;
+                            
+                            @include phone(){
+                                font-size: 10vw;
+                            }
+                            
+                            &:hover{
+                                opacity: .5;
+                            }
+                        }                
+                    }
+
+                    &::after{
+                        @include size(100vw, 100vh);
+                        content: '';
+                        @include position(absolute, 0, 0, initial, initial, -1);                  
+                        background-color: $red;
+                        opacity: .5;
+
+                        @include phone(){
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            .list{
+                margin: 0 .5vw;
+
+                .link{
+                    font-size: 1.5vw;
+                    color: $grey;
+                    position: relative;
+
+                    &:hover{
+                        opacity: .5;
+                    }
+                }
+            }
+        }
+
+        .menu{
+            display: none;
+            @include size(3rem, 3rem);
+            cursor: pointer;
+
+            @include tablet(){
+                display: initial;
+            }
+        }
+    }
+}

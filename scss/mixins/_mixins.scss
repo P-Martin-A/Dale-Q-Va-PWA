@@ -12,14 +12,39 @@
 }
 
 // flex
-@mixin flex($jc: center, $ai: center){
+@mixin flex($justify-content: center, $align-items: center){
     display: flex;
-    justify-content: $jc;
-    align-items: $ai;
+    justify-content: $justify-content;
+    align-items: $align-items;
 }
 
 // Size
-@mixin size($height, $width){
-    height: $height;
+@mixin size($width, $height){
     width: $width;
+    height: $height;
+}
+
+// Posicion
+@mixin position($position, $top, $right, $bottom, $left, $z-index){
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+    z-index: $z-index;
+}   
+
+
+
+// Media Querys
+@mixin tablet(){
+    @media screen and(max-width: 700px){
+        @content;
+    }
+}
+
+@mixin phone(){
+    @media screen and(max-width: 300px){
+        @content;
+    }
 }
