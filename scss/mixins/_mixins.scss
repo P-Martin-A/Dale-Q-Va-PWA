@@ -1,0 +1,25 @@
+// Grid
+@mixin grid(){
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+}
+
+// Grid Area
+@mixin gridArea($height, $rowB, $colB, $rowE, $colE){
+    height: $height;
+    grid-area: $rowB/ $colB/ $rowE/ $colE;
+    padding: 0 2rem;    
+}
+
+// flex
+@mixin flex($jc: center, $ai: center){
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+// Size
+@mixin size($height, $width){
+    height: $height;
+    width: $width;
+}
