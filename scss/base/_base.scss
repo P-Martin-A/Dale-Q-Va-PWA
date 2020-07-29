@@ -12,6 +12,70 @@ html{
     body{
         background-color: $white;
         color: $grey;
+        font-family: $font;    
+        overflow-x: hidden;
+
+        h1{
+            font-size: $h1;
+            text-transform: uppercase;
+            @include tablet(){
+                font-size: 5.5vw;
+            }
+            @include phone(){
+                font-size: 6vw;
+            }
+        }
+
+        h2{
+            font-size: $h2;
+            text-transform: uppercase;
+            @include tablet(){
+                font-size: 4.5vw;
+            }
+            @include phone(){
+                font-size: 5vw;
+            }
+        }
+
+        h3{
+            font-size: $h3;
+            @include tablet(){
+                font-size: 3.5vw;
+            }
+            @include phone(){
+                font-size: 4vw;
+            }
+        }
+
+        h4{
+            font-size: $h4;
+            @include tablet(){
+                font-size: 2.5vw;
+            }
+            @include phone(){
+                font-size: 3vw;
+            }
+        }
+
+        p{
+            font-size: $p;
+            @include tablet(){
+                font-size: 3vw;
+            }
+            @include phone(){
+                font-size: 3.5vw;
+            }
+        }
+
+        a{
+            font-size: $a;
+            @include tablet(){
+                font-size: 2vw;
+            }
+            @include phone(){
+                font-size: 2.5vw;
+            }
+        }
 
         .container{
             @include grid();
