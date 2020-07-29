@@ -1,0 +1,41 @@
+.singers{
+    @include gridArea(auto, 4, 1, 5, -1);
+    padding: 2rem;
+
+    .title{
+        @include animationR(david);            
+        margin-bottom: 1rem;
+    }
+
+    .images{
+        @include flex();
+        @include size(100%, auto);
+        flex-wrap: wrap;
+
+        .david, .neno{
+            @include size(50%, 100vh);
+            @include tablet(){
+                @include size(100%, auto)
+            }
+
+            .subtitle{
+                color: $red;
+                @include tablet(){
+                    text-align: left;
+                }
+            }
+
+            .image{
+                @include size(100%, 100%)
+            }
+        }
+
+        .david{
+            @include animationR(david);            
+        }
+
+        .neno{
+            @include animationL(neno);            
+        }
+    }
+}

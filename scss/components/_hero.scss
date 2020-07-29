@@ -14,7 +14,7 @@
         @include tablet(){
             @include size(100%, auto);
             z-index: -1;
-            @include animationT(hero-contentT);
+            @include animationB(hero-content);
         }
         
         .title{
@@ -23,6 +23,7 @@
 
         .subtitle{
             opacity: .5;
+            line-height: 1.5;
             text-transform: capitalize;
         }
     }
