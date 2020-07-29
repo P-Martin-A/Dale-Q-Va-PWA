@@ -1,39 +1,20 @@
 .hero{
-    @include gridArea(75vh, 2, 1, 3, -1);
+    @include gridArea(90vh, 2, 1, 3, -1);
     @include flex(space-between);
     padding: 2rem;
     @include tablet(){
         @include flex();
         flex-direction: column;
-        height: 70vh;
-    }
-    @include phone(){
-        height: 65vh;
+        height: 90vh;
     }
 
     .content{
         @include size(70%, auto);
-        animation: content 2s ease;
-        position: relative;
+        @include animationR(hero-content);
         @include tablet(){
             @include size(100%, auto);
-            animation: contentT 2s ease;
             z-index: -1;
-            @keyframes contentT{
-                0%{
-                    top: -100%;
-                }100%{
-                    top: 0;
-                }
-            }
-        }
-
-        @keyframes content{
-            0%{
-                left: -100%;
-            }100%{
-                left: 0;
-            }
+            @include animationT(hero-contentT);
         }
         
         .title{
@@ -49,22 +30,14 @@
     .images{
         @include size(25%, auto);  
         @include flex();
-        animation: images 2.2s ease;
-        position: relative;
+        @include animationL(hero-image);
         @include tablet(){
             @include size(40vw, 20rem);
+            margin-top: 2rem;
         }  
         @include phone(){
             @include size(50vw, 15rem);
         }  
-
-        @keyframes images{
-            0%{
-                right: -100%;
-            }100%{
-                right: 0;
-            }
-        }
 
         .image{            
             @include size(100%, 100%);

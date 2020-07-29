@@ -19,10 +19,10 @@ html{
             font-size: $h1;
             text-transform: uppercase;
             @include tablet(){
-                font-size: 5.5vw;
+                font-size: 5vw;
             }
             @include phone(){
-                font-size: 6vw;
+                font-size: 5.5vw;
             }
         }
 
@@ -30,10 +30,10 @@ html{
             font-size: $h2;
             text-transform: uppercase;
             @include tablet(){
-                font-size: 4.5vw;
+                font-size: 4vw;
             }
             @include phone(){
-                font-size: 5vw;
+                font-size: 4.5vw;
             }
         }
 
@@ -50,20 +50,20 @@ html{
         h4{
             font-size: $h4;
             @include tablet(){
-                font-size: 2.5vw;
+                font-size: 3vw;
             }
             @include phone(){
-                font-size: 3vw;
+                font-size: 3.5vw;
             }
         }
 
         p{
             font-size: $p;
             @include tablet(){
-                font-size: 3vw;
+                font-size: 2.5vw;
             }
             @include phone(){
-                font-size: 3.5vw;
+                font-size: 3vw;
             }
         }
 

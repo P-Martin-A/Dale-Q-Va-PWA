@@ -36,6 +36,59 @@
     z-index: $z-index;
 }   
 
+// Animation
+@mixin animationT($animation){
+    position: relative;
+    animation: $animation 2s ease;
+
+    @keyframes #{$animation}{
+        0%{
+            top: 100%;
+        }100%{
+            top: 0;
+        }
+    }
+}
+
+@mixin animationR($animation){
+    position: relative;
+    animation: $animation 2s ease;
+
+    @keyframes #{$animation}{
+        0%{
+            right: 100%;
+        }100%{
+            right: 0;
+        }
+    }
+}
+
+@mixin animationB($animation){
+    position: relative;
+    animation: $animation 2s ease;
+
+    @keyframes #{$animation}{
+        0%{
+            bottom: 100%;
+        }100%{
+            bottom: 0;
+        }
+    }
+}
+
+@mixin animationL($animation){
+    position: relative;
+    animation: $animation 2s ease;
+
+    @keyframes #{$animation}{
+        0%{
+            left: 100%;
+        }100%{
+            left: 0;
+        }
+    }
+}
+// Animation End
 
 
 // Media Querys

@@ -1,0 +1,19 @@
+.about{
+    @include gridArea(auto, 3, 1, 4, -1);
+    padding: 2rem;
+
+    .content{
+        @include animationL(about-content);
+    }
+
+    .images{
+        @include flex();
+        @include size(100%, auto);
+        @include animationR(about-image);
+        margin-top: 2.5rem;
+
+        .image{        
+            @include size(50vw, auto);
+        }
+    }
+}
