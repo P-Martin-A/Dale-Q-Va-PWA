@@ -1,8 +1,10 @@
 .header{
     @include flex(space-between);
+    @include position(fixed, 0, initial, initial, 0, 10);
     @include gridArea(5rem, 1, 1, -1, -1);
     box-shadow: 1px 0 5px $grey;
     background-color: $white;
+    width: 100%;
 
     .logo-box{
         @include size(5rem, 100%);
@@ -29,8 +31,8 @@
                 display: none;
 
                 &.active{
-                    @include size(30%, 100%);
-                    @include position(absolute, 0, 0, initial, initial, 5);                   
+                    @include size(30%, 100vh);
+                    @include position(absolute, 0, 0, initial, initial, 15);                   
                     display: initial;
                     flex-direction: column;        
                     background: $red;

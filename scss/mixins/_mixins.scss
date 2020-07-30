@@ -1,6 +1,7 @@
 // Grid
 @mixin grid(){
     display: grid;
+    @content;
 }
 
 // Grid Area
@@ -18,6 +19,7 @@
     display: flex;
     justify-content: $justify-content;
     align-items: $align-items;
+    @content;
 }
 
 // Size
@@ -26,7 +28,7 @@
     height: $height;
 }
 
-// Posicion
+// Position
 @mixin position($position, $top, $right, $bottom, $left, $z-index){
     position: $position;
     top: $top;
@@ -36,60 +38,90 @@
     z-index: $z-index;
 }   
 
+// Group Input
+@mixin form-group(){
+    @include size(100%, 100%);
+    padding: 0;
+    .group-input{
+        margin-top: .5rem;
+        @content;
+    }
+}
+// Input
+@mixin input($input){
+    .input-#{$input}{
+        @include size(100%, 100%);
+        padding: 1rem 2rem;
+        font-size: 1.5rem;
+        border: none;
+        border-radius: .5rem;
+        box-shadow: inset 0 0 5px $grey;
+        
+        &:focus{            
+            box-shadow: 0 0 10px $black;
+        }
+
+        &.incorrect{
+            box-shadow: inset 0 0 5px $red;
+        }
+        
+        &.correct{ 
+            box-shadow: inset 0 0 5px $green;
+        }
+    } 
+}
+// Input Icon
+@mixin icon(){
+    position: relative;
+    i{
+        @include position(absolute, 50%, initial, initial, 95%, 2);
+        display: none;
+        transform: translate(-95%, -50%);
+        font-size: 2rem;
+
+        &.bxs-x-circle{
+            display: initial;
+            color: $red;
+        }
+        
+        &.bxs-check-circle{
+            display: initial;
+            color: lime;
+        }
+    }
+}
+
 // Animation
 @mixin animationT($animation){
-    position: relative;
-    animation: $animation 2s ease;
-
+    animation: $animation 2s ease-in-out;
     @keyframes #{$animation}{
         0%{
-            top: 100%;
+            transform: translateY(-100%);
         }100%{
-            top: 0;
+            transform: translateY(0);
         }
     }
 }
-
 @mixin animationR($animation){
-    position: relative;
-    animation: $animation 2s ease;
-
+    animation: $animation 2s ease-in-out;
     @keyframes #{$animation}{
         0%{
-            right: 100%;
+            transform: translateX(100%);
         }100%{
-            right: 0;
+            transform: translateX(0);
         }
     }
 }
-
-@mixin animationB($animation){
-    position: relative;
-    animation: $animation 2s ease;
-
-    @keyframes #{$animation}{
-        0%{
-            bottom: 100%;
-        }100%{
-            bottom: 0;
-        }
-    }
-}
-
 @mixin animationL($animation){
-    position: relative;
-    animation: $animation 2s ease;
-
+    animation: $animation 2s ease-in-out;
     @keyframes #{$animation}{
         0%{
-            left: 100%;
+            transform: translateX(-100%);
         }100%{
-            left: 0;
+            transform: translateX(0);
         }
     }
 }
-// Animation End
-
 
 // Media Querys
 @mixin tablet(){
@@ -103,3 +135,5 @@
         @content;
     }
 }
+
+

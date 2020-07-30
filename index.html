@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Icons -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
     <!-- My Styles -->
     <link rel="stylesheet" href="css/styles.css">
@@ -27,13 +30,13 @@
                         <a href="#" class="link">Inicio</a>
                     </li>
                     <li class="list">
-                        <a href="#Sobre-Nosotros" class="link">Sobre Nosotros</a>
+                        <a href="#about" class="link">Sobre Nosotros</a>
                     </li>
                     <li class="list">
-                        <a href="#Cantantes" class="link">Cantantes</a>
+                        <a href="#singers" class="link">Cantantes</a>
                     </li>
                     <li class="list">
-                        <a href="#Contactanos" class="link">Contactanos</a>
+                        <a href="#contact" class="link">Contactanos</a>
                     </li>
                 </ul>
             </nav>  
@@ -53,7 +56,7 @@
         <!-- END HERO -->
 
         <!-- BEGIN ABOUT -->
-        <section class="about" id="Sobre-Nosotros">
+        <section class="about" id="about">
             <div class="content">
                 <h2 class="title">Sobre nosotros</h2>
                 <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ab neque qui repellendus, animi illo eaque? Commodi nisi officiis, tempora exercitationem dicta assumenda debitis corrupti magni! Qui nobis alias sed.</p>
@@ -65,7 +68,7 @@
         <!-- END ABOUT -->
 
         <!-- BEGIN MEMBERS -->
-        <section class="singers" id="Cantantes">
+        <section class="singers" id="singers">
             <h2 class="title">Cantantes</h2>
             <div class="images">
                 <div class="david">
@@ -82,6 +85,35 @@
         </section>
         <!-- END MEMBERS -->
     
+        <!-- BEGIN CONTACT -->
+        <footer class="contact" id="contact">
+            <form action="#" class="form" id="form">
+                <div class="group-name" id="group-name">
+                    <div class="group-input">
+                        <input type="text" name="name" id="name" class="input-name" placeholder="Nombre y Apellido" required>
+                        <i class="bx"></i>                    
+                    </div>
+                </div>
+                <div class="group-email" id="group-email">
+                    <div class="group-input">
+                        <input type="email" name="email" id="email" class="input-email" placeholder="correo@correo.com" required> 
+                        <i class="bx"></i>                    
+                    </div>
+                </div>
+                <div class="group-message" id="group-message">
+                    <div class="group-input">
+                        <textarea name="message" id="message" cols="30" rows="10" class="input-message" placeholder="Mensaje"></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="btn">Enviar</button>
+            </form>
+
+            <div class="footer">
+                <p class="text">Copyright © 2020 - Todo los derechos reservados.</p>
+            </div>
+        </footer>
+        <!-- END CONTACT -->
+
     </div>
     <!-- END CONTAINER -->
 

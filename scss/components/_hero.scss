@@ -2,19 +2,21 @@
     @include gridArea(90vh, 2, 1, 3, -1);
     @include flex(space-between);
     padding: 2rem;
+    margin-top: 5rem;
     @include tablet(){
-        @include flex();
-        flex-direction: column;
-        height: 90vh;
+        @include flex(){
+            flex-direction: column;
+        }
+        height: 85vh;
     }
 
     .content{
         @include size(70%, auto);
-        @include animationR(hero-content);
+        @include animationL(hero-content);
         @include tablet(){
+            @include animationT(hero-contentT);
             @include size(100%, auto);
             z-index: -1;
-            @include animationB(hero-content);
         }
         
         .title{
@@ -30,14 +32,14 @@
 
     .images{
         @include size(25%, auto);  
+        @include animationR(hero-image);
         @include flex();
-        @include animationL(hero-image);
         @include tablet(){
             @include size(40vw, 20rem);
             margin-top: 2rem;
         }  
         @include phone(){
-            @include size(50vw, 15rem);
+            @include size(60vw, 20rem);
         }  
 
         .image{            

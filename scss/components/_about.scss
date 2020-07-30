@@ -1,23 +1,16 @@
 .about{
     @include gridArea(auto, 3, 1, 4, -1);
     padding: 2rem;
-
-    .content{
-        @include animationL(about-content);
-    }
+    transform: translateX(-100%);
+    transition: transform 2s ease-in-out;
 
     .images{
         @include flex();
-        @include size(100%, auto);
-        @include animationR(about-image);
+        @include size(100%, 100%);
         margin-top: 2.5rem;
 
         .image{        
-            @include size(50vw, auto);
-
-            @include tablet(){
-                @include size(90vw, auto)
-            }
+            @include size(100%, 100%);
         }
     }
 }

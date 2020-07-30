@@ -1,16 +1,18 @@
 .singers{
     @include gridArea(auto, 4, 1, 5, -1);
-    padding: 2rem;
+    padding: 4rem 2rem;
+    transform: translateX(-100%);
+    transition: transform 2s ease-in-out;
 
     .title{
-        @include animationR(david);            
         margin-bottom: 1rem;
     }
 
     .images{
-        @include flex();
         @include size(100%, auto);
-        flex-wrap: wrap;
+        @include flex(){
+            flex-wrap: wrap;
+        }
 
         .david, .neno{
             @include size(50%, 100vh);
@@ -26,16 +28,8 @@
             }
 
             .image{
-                @include size(100%, 100%)
+                @include size(100%, 90%)
             }
-        }
-
-        .david{
-            @include animationR(david);            
-        }
-
-        .neno{
-            @include animationL(neno);            
         }
     }
 }

@@ -1,0 +1,68 @@
+.contact{
+    @include gridArea(50rem, 5, 1, 6, -1);
+    @include flex(space-between){
+        flex-direction: column;
+    }
+    padding: 2rem;
+    transform: translateX(-100%);
+    transition: transform 2s ease-in-out;
+
+    .form{
+        @include size(75vw, 40rem);
+        @include grid(){
+            grid-template-rows: repeat(3, 1fr);
+            place-items: center;
+            text-align: center;
+        }
+
+        .group-name{
+            @include gridArea(auto, 1, 1, 2, -1);
+            @include form-group(){
+                @include input(name);
+                @include icon();
+            }
+        }
+        
+        .group-email{
+            @include gridArea(auto, 2, 1, 3, -1);
+            @include form-group(){
+                @include input(email);
+                @include icon();
+            }
+        }
+
+        .group-message{
+            @include gridArea(auto, 3, 1, 4, -1);
+            @include form-group(){
+                @include input(message);
+            }
+        }
+
+        .btn{     
+            cursor: pointer;
+            border-radius: .4rem;
+            border: none;
+            padding: 1rem 2rem;
+            margin-top: 2rem;
+            background: $red;
+            color: $white;
+            font-size: 2rem;
+            @include tablet(){
+                @include size(100%, auto)
+            }
+
+            &:hover, &:active, &::selection{
+                box-shadow: 0 0 20px $red;
+            }
+        }
+    }   
+
+    .footer{
+        margin-top: 2.5rem;
+        border-top: 1px solid;
+
+        .text{
+            text-transform: capitalize;
+        }
+    }
+}
