@@ -1,18 +1,19 @@
 // Name and Version Cache
 const CACHE_NAME  = 'v1_cache_dale_q_va_pwa',
       urlsToCache = [
-            './',
+            '../',
             'https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css',
-            './css/styles.css',
-            './js/index.js',
-            './js/service/service.js',
-            './images/logo_rojo.png',
-            './images/icons/menu.svg',
-            './images/icons/closed.svg',
-            './images/dqv.jpg',
-            './images/david.png',
-            './images/neno.png'
-      ]
+            '../../css/styles.css',
+            '../index.js',
+            './service.js',
+            '../../images/logo_rojo.png',
+            '../../images/favicon.png',
+            '../../images/icons/menu.svg',
+            '../../images/icons/closed.svg',
+            '../../images/dqv.jpg',
+            '../../images/david.png',
+            '../../images/neno.png'
+        ] 
 
 //durante la fase de instalación, generalmente se almacena en caché los activos estáticos
 self.addEventListener('install', e => {
