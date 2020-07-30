@@ -4,12 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <!-- Description -->
+    <meta name="description" content="Esto es una prueba de combertir una pagina a una PWA">
+
+    <!-- Navigation bar color -->
+    <meta name="theme-color" content="#ff3838">
+    
+    <!-- To tell mobile browsers that my site is mobile optimized and friendly -->
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    
+    <!-- For Apple Mobiles -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="./images/logo_rojo.png">
+    
+    <!-- Image that will be as a PWA icon -->
+    <link rel="apple-touch-icon" href="./images/logo_rojo.png">
+    
+    <!-- Touching the PWA icon displays a blank screen with the icon in the middle -->
+    <link rel="apple-touch-startup-image" href="./images/logo_rojo.png">
+
+    <!-- Application information -->
+    <link rel="manifest" href="./js/json/manifest.json">
+
     <!-- Icons -->
-    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css'>
 
     <!-- My Styles -->
-    <link rel="stylesheet" href="css/styles.css">
-    <title>Dale Q' Va</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Dale Q' Va PWA</title>
 </head>
 <body>                        
     <!-- BEGIN CONTAINER -->
@@ -116,7 +142,8 @@
 
     </div>
     <!-- END CONTAINER -->
-
-    <script src="js/index.js"></script>
+    
+    <script src="./js/service/service.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 </html>

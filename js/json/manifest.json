@@ -1,0 +1,12 @@
+{
+    "name": "Dale Q' Va PWA",
+    "short_name": "Dale Q' Va PWA",
+    "description": "Esto es una prueba de combertir una pagina a una PWA",
+    "background_color": "#ececec",
+    "theme_color": "#ff3838",
+    "orientation": "portrait",
+    "display": "standalone",
+    "start_url": "./?utm_source=web_app_manifest",
+    "scope": "./",
+    "lang": "es"
+}
