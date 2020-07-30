@@ -1,7 +1,7 @@
 // Name and Version Cache
 const CACHE_NAME  = 'v1_cache_dale_q_va_pwa',
       urlsToCache = [
-            '../',
+            '../../',
             'https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css',
             '../../css/styles.css',
             '../index.js',
