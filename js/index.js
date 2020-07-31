@@ -40,13 +40,11 @@ const fieldValidation = (expression, input, field)=>{
     }
 }
 
-
-
 window.addEventListener('scroll', ()=>{
     const $ABOUT    = document.getElementById('about'),
           $SINGERS  = document.getElementById('singers'),
           $CONTACT  = document.getElementById('contact'),
-          VIEWPORT  = window.innerHeight/2,
+          VIEWPORT  = window.innerHeight/1.5,
           POSITIONA = $ABOUT.getBoundingClientRect().top, 
           POSITIONS = $SINGERS.getBoundingClientRect().top,
           POSITIONC = $CONTACT.getBoundingClientRect().top

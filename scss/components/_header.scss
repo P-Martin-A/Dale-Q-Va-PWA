@@ -39,6 +39,7 @@
 
                     @include phone(){
                         width: 100%;
+                        overflow-y: scroll;
                     }
                     
                     .closed{
@@ -58,7 +59,7 @@
                             font-size: 4vw;
                             
                             @include phone(){
-                                font-size: 10vw;
+                                font-size: 10vw;                                
                             }
                             
                             &:hover{
